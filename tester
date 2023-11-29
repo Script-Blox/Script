@@ -1,0 +1,29 @@
+local Fluxus = gethui():FindFirstChild("FluxusAndroidUI")
+
+getgenv().Cache = Cache
+
+if Fluxus and not Cache then
+	Cache = true
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "ScriptBlox [BOT]"; 
+        Text = "Executor [Fluxus]"; 
+        Icon = "http://www.roblox.com/asset/?id=14355269935";
+        Duration = 10
+    })
+    wait(3)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TESTDONOTSCAM/Script/main/ScriptBlox'))()
+elseif not Fluxus then
+    Cache = false
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "ScriptBlox [BOT]"; 
+        Text = "Executor Not [Fluxus]"; 
+        Icon = "http://www.roblox.com/asset/?id=14355269935";
+        Duration = 10
+    })
+    wait(3)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TESTDONOTSCAM/Script/main/ScriptBlox'))()
+    wait(3)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TESTDONOTSCAM/Script/main/ScriptBlox'))()
+end
